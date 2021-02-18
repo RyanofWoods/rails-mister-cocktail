@@ -1,6 +1,7 @@
 <div class="container">
   <h1><%= @cocktail.name %></h1>
 
+  <%= link_to "Make a new dose", new_cocktail_dose_path(@cocktail) %>
   <ul>
     <% @cocktail.doses.each do |dose| %>
       <li>
