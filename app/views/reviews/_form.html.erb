@@ -1,0 +1,5 @@
+<%= simple_form_for [@cocktail, @review] do |f| %>
+  <%= f.input :content, autofocus: true %>
+  <%= f.input :rating, collection: Review::RATING %>
+  <%= f.submit "Create review", class: "btn btn-light" %>
+<% end %>

@@ -13,4 +13,19 @@
     <% end %>
   </ul>
   <%= link_to "Add a new ingredient", new_cocktail_dose_path(@cocktail) %>
+
+  <hr>
+    <h4>Leave a review</h4>
+    <%= render 'reviews/form' %>
+  <hr>
+
+  <h3>Reviews:</h3>
+  <ul>
+    <% @cocktail.reviews.each do |review| %>
+      <li>
+        <%= review.rating %> - 
+        <%= review.content %>
+      </li>
+  <% end %>
+  </ul>
 </div>
