@@ -8,6 +8,8 @@
 require 'open-uri'
 require 'json'
 
+Ingredient.destroy_all if Rails.env.development?
+
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredient_serialized = open(url).read
 ingredients = JSON.parse(ingredient_serialized)
