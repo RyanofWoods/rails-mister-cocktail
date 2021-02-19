@@ -1,11 +1,14 @@
+.card-link {
+  &:hover h4 {
+    color: #888;
+  }
+  h4 {
+    transition: color 0.2s ease;
+  }
+}
+
 .card {
   border-radius: $border-radius;
-  height: 250px;
-  a {
-    text-decoration: none;
-    color: $body-bg;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
+  height: 350px;
+  color: $body-color;
 }
